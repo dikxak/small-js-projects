@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+@import "config", "resets", "utilities";
+
+body,
+html {
+  line-height: 1.5;
+  font-family: "Odibee Sans", cursive;
+  background-color: $primary-color;
+  color: $light-color;
+  height: 100vh;
+}
+
+#main-header {
+  height: 20.625rem;
+  border: 20px solid $light-color;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  #game-heading {
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 25px;
+    padding: 2rem 0rem;
+  }
+  .play-again {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+  }
+  p {
+    font-size: 1.75rem;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+  .secret-number-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 8rem;
+    text-align: center;
+    background: $light-color;
+    color: $dark-color;
+    font-size: 7.75rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -42%);
+  }
+}
+
+#main-game-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2.5rem 0rem;
+  place-items: center;
+  .number {
+    display: block;
+    width: 20rem;
+    font-size: 6rem;
+    background: $light-color;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    margin-top: 4rem;
+    margin-bottom: 1.25rem;
+    font-family: "Odibee Sans", cursive;
+  }
+
+  .game-info-section {
+    margin-top: 4rem;
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    & > *:first-child {
+      margin-bottom: 3rem;
+    }
+    .highscore {
+      padding-top: 0.5rem;
+    }
+  }
+}

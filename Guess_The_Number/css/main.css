@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.btn {
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.75rem;
+  font-family: "Odibee Sans", cursive;
+}
+
+body,
+html {
+  line-height: 1.5;
+  font-family: "Odibee Sans", cursive;
+  background-color: #291746;
+  color: #fff;
+  height: 100vh;
+}
+
+#main-header {
+  height: 20.625rem;
+  border: 20px solid #fff;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+#main-header #game-heading {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 25px;
+  padding: 2rem 0rem;
+}
+
+#main-header .play-again {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+#main-header p {
+  font-size: 1.75rem;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+#main-header .secret-number-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15rem;
+  height: 8rem;
+  text-align: center;
+  background: #fff;
+  color: #333;
+  font-size: 7.75rem;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -42%);
+          transform: translate(-50%, -42%);
+}
+
+#main-game-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding: 2.5rem 0rem;
+  place-items: center;
+}
+
+#main-game-section .number {
+  display: block;
+  width: 20rem;
+  font-size: 6rem;
+  background: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  margin-top: 4rem;
+  margin-bottom: 1.25rem;
+  font-family: "Odibee Sans", cursive;
+}
+
+#main-game-section .game-info-section {
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+#main-game-section .game-info-section > *:first-child {
+  margin-bottom: 3rem;
+}
+
+#main-game-section .game-info-section .highscore {
+  padding-top: 0.5rem;
+}
+/*# sourceMappingURL=main.css.map */

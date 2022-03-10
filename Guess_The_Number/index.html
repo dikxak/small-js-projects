@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Guess My Number</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <h1 id="game-heading">guess the number</h1>
+      <button class="btn play-again">Play Again 🔁</button>
+      <p>&lt; Guess Number Between 1 to 20 &gt;</p>
+      <div class="secret-number-section">?</div>
+    </header>
+
+    <main id="main-game-section">
+      <div class="input-section">
+        <div>
+          <input type="number" name="userInput" class="number" />
+        </div>
+        <div>
+          <button class="btn check-number">check ✔</button>
+        </div>
+      </div>
+      <div class="game-info-section">
+        <p class="user-message">💁‍♀️ Start Guessing....</p>
+        <p>💯 Score : <span class="score">20</span></p>
+        <p class="highscore">
+          🎖 High Score : <span class="high-score">0</span>
+        </p>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

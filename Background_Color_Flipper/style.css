@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+  display: grid;
+  place-items: center;
+  min-height: 99vh;
+}
+
+.container {
+  max-width: 120rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.primary-heading {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  width: 50rem;
+  text-align: center;
+}
+
+.hex-code {
+  color: lightsalmon;
+}
+
+.btn {
+  display: inline-block;
+  width: 30%;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.05s;
+}
+
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+}

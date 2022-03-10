@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 97.9vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.primary-heading {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbar {
+  font-size: 1.25rem;
+  visibility: hidden;
+
+  outline-color: rgb(223, 76, 22);
+  border-radius: 3px;
+  width: 0;
+  height: 2.5rem;
+
+  transition: all 0.4s;
+}
+
+.reveal-search {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.reveal-search::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 600;
+  content: '\f002';
+  display: inline-block;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  color: rgb(32, 32, 32);
+  -webkit-font-smoothing: antialiased;
+}
+
+.reveal {
+  visibility: visible;
+  width: 20rem;
+}
