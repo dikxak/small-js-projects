@@ -5,39 +5,36 @@ const startAnalogueClock = () => {
   const minuteNeedle = document.querySelector('.minute-needle');
   const hourNeedle = document.querySelector('.hour-needle');
 
-  let curSec = new Date().getSeconds();
-  let curMin = new Date().getMinutes();
-  let curHr = new Date().getHours();
+  let date = new Date();
+  let curSec = date.getSeconds();
+  let curMin = date.getMinutes();
+  let curHr = date.getHours();
 
-  const setTransform = function (curTime, transformVal) {
+  const setTransform = (curTime, transformVal) => {
     return `translate(-50%, 50%) rotate(${curTime * transformVal}deg)`;
   };
 
-  const initClock = function () {
+  const initClock = () => {
     secondNeedle.style.transform = setTransform(curSec, 6);
     minuteNeedle.style.transform = setTransform(curMin, 6);
     hourNeedle.style.transform = setTransform(curHr, 30);
   };
 
-  const runClock = function () {
+  const runClock = () => {
     setInterval(() => {
-      curSec = new Date().getSeconds();
-      secondNeedle.style.transform = `translate(-50%, 50%) rotate(${
-        curSec * 6
-      }deg)`;
+      date = new Date();
+
+      curSec = date.getSeconds();
+      secondNeedle.style.transform = setTransform(curSec, 6);
 
       if (curSec === 0) {
-        curMin = new Date().getMinutes();
-        minuteNeedle.style.transform = `translate(-50%,50%) rotate(${
-          curMin * 6
-        }deg)`;
+        curMin = date.getMinutes();
+        minuteNeedle.style.transform = setTransform(curMin, 6);
       }
 
       if (curMin === 0) {
-        curHr = new Date().getHours();
-        hourNeedle.style.transform = `translate(-50%,50%) rotate(${
-          curHr * 30
-        }deg)`;
+        curHr = date.getHours();
+        hourNeedle.style.transform = setTransform(curHr, 30);
       }
     }, 1000);
   };

@@ -10,10 +10,20 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="primary-heading">
-        Background Color: <span class="hex-code">#FFFFFF</span>
-      </h1>
-      <button class="btn">Change Color</button>
+      <div class="heading-container">
+        <h2 class="secondary-heading">
+          Background Color: <span class="hex-code">#FFFFFF</span>
+        </h2>
+
+        <h2 class="secondary-heading rgb-value-heading hidden">
+          RGB Value: <span class="rgb-value">rgb(255,255,255)</span>
+        </h2>
+      </div>
+      <div class="btn-container">
+        <button class="btn btn-prev-color">Previous Color</button>
+        <button class="btn btn-change-color">Change Color</button>
+        <button class="btn btn-rgb-value">Generate RGB Value</button>
+      </div>
     </div>
   </body>
 </html>

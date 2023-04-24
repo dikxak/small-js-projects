@@ -1,7 +1,12 @@
 'use strict';
 
 const hexCode = document.querySelector('.hex-code');
-const btnChanger = document.querySelector('.btn');
+const rgbValueHeading = document.querySelector('.rgb-value-heading');
+const rgbValue = document.querySelector('.rgb-value');
+const btnChangeColor = document.querySelector('.btn-change-color');
+const btnPrevColor = document.querySelector('.btn-prev-color');
+const btnRgbValue = document.querySelector('.btn-rgb-value');
+
 const hexCodes = [
   'a',
   'b',
@@ -21,7 +26,9 @@ const hexCodes = [
   '9',
 ];
 
-const chooseHex = function () {
+const colors = ['#FFFFFF'];
+
+const chooseHex = () => {
   return Math.trunc(Math.random() * hexCodes.length);
 };
 
@@ -34,8 +41,8 @@ const colorNameMap = new Map([
   ['#FFC0CB', 'Pink'],
 ]);
 
-const changeBackground = function () {
-  const hexString = `#${hexCodes[chooseHex()].toUpperCase()}${hexCodes[
+const getHexString = () =>
+  `#${hexCodes[chooseHex()].toUpperCase()}${hexCodes[
     chooseHex()
   ].toUpperCase()}${hexCodes[chooseHex()].toUpperCase()}${hexCodes[
     chooseHex()
@@ -43,13 +50,48 @@ const changeBackground = function () {
     chooseHex()
   ].toUpperCase()}`;
 
+const changeBackground = hexString => {
   document.body.style.backgroundColor = hexString;
 
-  if (colorNameMap.has(hexString)) {
+  if (colorNameMap.has(hexString))
     hexCode.textContent = colorNameMap.get(hexString);
-  } else {
-    hexCode.textContent = hexString;
-  }
+  else hexCode.textContent = hexString;
 };
 
-btnChanger.addEventListener('click', changeBackground);
+const generateRandomHexValue = () => {
+  const hexString = getHexString();
+
+  if (colors.length === 1) colors.push(hexString);
+  else {
+    colors[0] = colors[1];
+    colors[1] = hexString;
+  }
+
+  rgbValueHeading.classList.add('hidden');
+  changeBackground(colors[1]);
+};
+
+const changeToPrevBackground = () => {
+  if (colors.length <= 1) return;
+
+  colors[1] = colors[0];
+
+  rgbValueHeading.classList.add('hidden');
+  changeBackground(colors[0]);
+};
+
+const generateRGBValue = () => {
+  const colorIndex = colors.length === 2 ? 1 : 0;
+  const hexValue = colors[colorIndex].replace('#', '');
+
+  const rValue = parseInt(hexValue.substring(0, 2), 16);
+  const gValue = parseInt(hexValue.substring(2, 4), 16);
+  const bValue = parseInt(hexValue.substring(4, 6), 16);
+
+  rgbValueHeading.classList.remove('hidden');
+  rgbValue.textContent = `rgb(${rValue},${gValue},${bValue})`;
+};
+
+btnChangeColor.addEventListener('click', generateRandomHexValue);
+btnPrevColor.addEventListener('click', changeToPrevBackground);
+btnRgbValue.addEventListener('click', generateRGBValue);
