@@ -1,0 +1,149 @@
+[
+  {
+    "id": 1,
+    "type": "category",
+    "name": "Electronics",
+    "products": [
+      {
+        "id": 1,
+        "name": "Mobile",
+        "price": 10000,
+        "type": "product",
+        "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/71AvQd3VzqL._AC._SR360,460.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Laptop",
+        "price": 100000,
+        "type": "product",
+        "imageUrl": "https://consumer.huawei.com/content/dam/huawei-cbg-site/southeast-asia/bd/mkt/plp/laptops/matebook-d-15.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Watch",
+        "price": 1000,
+        "type": "product",
+        "imageUrl": "https://media.istockphoto.com/photos/watch-picture-id916408346?k=20&m=916408346&s=612x612&w=0&h=pzFvtlKT8xq9eVq1YmNMV2bF1dTTL7ayS9ce2G3Kyu4="
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "category",
+    "name": "Fashion",
+    "products": [
+      {
+        "id": 1,
+        "name": "Tshirt",
+        "price": 500,
+        "type": "product",
+        "imageUrl": "https://www.bfgcdn.com/1500_1500_90/016-2314-1711/sherpa-tarcho-tee-t-shirt.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Pant",
+        "price": 1000,
+        "type": "product",
+        "imageUrl": "http://cdn.shopify.com/s/files/1/0888/4876/products/Truewerk-T2-WerkPant-Sand_1024x1024.jpg?v=1656468537"
+      },
+      {
+        "id": 3,
+        "name": "Socks",
+        "price": 100,
+        "type": "product",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0044/2813/6551/products/TomSachsSpaceProgramSocks1_2048x.jpg?v=1654647150"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "type": "category",
+    "name": "Lifestyle",
+    "products": [
+      {
+        "id": 1,
+        "name": "Clock",
+        "price": 500,
+        "type": "product",
+        "imageUrl": "https://m.media-amazon.com/images/I/51DQ7BGGd+L._AC_SL1500_.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Curtains",
+        "price": 1000,
+        "type": "product",
+        "imageUrl": "https://m.media-amazon.com/images/I/71zwaRTbp0L._SL1500_.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Mirror",
+        "price": 100,
+        "type": "product",
+        "imageUrl": "https://www.ikea.com/be/en/images/products/nissedal-mirror-black__0637805_pe698601_s5.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Vase",
+        "price": 100,
+        "type": "product",
+        "imageUrl": "https://dictionary.cambridge.org/fr/images/thumb/vase_noun_002_39902.jpg?version=5.0.252"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "category",
+    "name": "Automobile",
+    "products": [
+      {
+        "id": 1,
+        "name": "Bike",
+        "price": 150000,
+        "type": "product",
+        "imageUrl": "https://media.zigcdn.com/media/model/2020/Feb/husqvarna-svartpilen-250-right-side-view_360x240.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Cycle",
+        "price": 20000,
+        "type": "product",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0773/9113/products/raw-xl-wythe-fixie-bike-28030031626320_2000x.jpg?v=1651579463"
+      },
+      {
+        "id": 3,
+        "name": "Car",
+        "price": 900000,
+        "type": "product",
+        "imageUrl": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "type": "category",
+    "name": "Beauty",
+    "products": [
+      {
+        "id": 1,
+        "name": "Comb",
+        "price": 500,
+        "type": "product",
+        "imageUrl": "https://c-ec.niceshops.com/upload/image/product/facebook/default/dantesmile-bamboo-comb-1-pc-1168348-en.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Nailpolish",
+        "price": 1000,
+        "type": "product",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Warrior_800x.jpg?v=1598529722"
+      },
+      {
+        "id": 3,
+        "name": "Brush",
+        "price": 100,
+        "type": "product",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0610/8879/2816/products/1411-RT-EXPERT-FACE-BRUSH-OUT-M-scaled_2400x.jpg?v=1644424914"
+      }
+    ]
+  }
+]

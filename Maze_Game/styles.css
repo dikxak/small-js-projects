@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* General Styling */
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.page-heading {
+  font-size: 3.6rem;
+  font-weight: 600;
+  letter-spacing: -1.75px;
+  margin-bottom: 3.2rem;
+}
+
+.user-msg {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 2.4rem;
+}
+
+.game-win-msg {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  inset: 0 0 0 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(0.15rem);
+  z-index: 10;
+
+  transition: opacity 0.2s ease-in;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #555;
+  color: #fff;
+  padding: 3.2rem 2.4rem;
+  border-radius: 1rem;
+  z-index: 20;
+
+  transition: opacity 0.2s ease-in;
+}
+
+.cross {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  cursor: pointer;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* App Styling */
+.app {
+  position: relative;
+}
+
+.maze-base {
+  position: relative;
+  display: grid;
+  gap: 0;
+}
+
+.floor,
+.grass {
+  border: 1px solid #fff;
+}
+
+.floor {
+  background-color: #da6d42;
+}
+
+.grass {
+  background-color: #138510;
+}
+
+.player,
+.key,
+.door {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  transform-origin: center;
+}
+
+.key {
+  transition: opacity 1.1s linear;
+}
+
+.player {
+  transition: top 0.25s linear, left 0.25s linear;
+}
+
+.shake {
+  animation: shake 800ms linear both;
+
+  transform: translateX(0);
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateX(-1px);
+  }
+
+  20%,
+  80% {
+    transform: translateX(2px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translateX(-4px);
+  }
+
+  40%,
+  60% {
+    transform: translateX(4px);
+  }
+}
